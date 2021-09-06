@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <title>ML1400</title>
+</head>
+<body>
+    <header class="header">
+        <section class="header_titulos">
+                    <h1>ESCUELA POLITECNICA NACIONAL</h1>
+                <div >Facultad de inveniería Electrica y Electrónica
+                </div>
+                <div>
+                    Proyecto de titulación
+                </div>
+        </section>
+        <aside class="header_logo">
+        </aside>
+    </header>
+    <section class="menu_control">
+        <section class="menu_control-botones">
+            <form>
+                
+                <h3 class="menu_control-titulo">MANDO REMOTO</h3>
+
+                <div class="marcha_paro">
+                    <button class="marcha_paro_b" id="on" type="button" onclick="marcha()">
+                        Marcha
+                    </button>
+                    <button class="marcha_paro_b" id="off" value="1" type="button" onclick="paro()">
+                        Paro
+                    </button>
+                </div>
+
+
+
+                
+
+                <div>
+                    <label for="setpoint1">
+                        Setpoint 1
+                    </label>
+                    <input class="set" id="s1" type="number">
+                    <button class="set_b" type="button" onclick="setpoint1()">
+                        Set1
+                    </button>
+
+                    <label for="setpoint2">
+                        Setpoint 2
+                    </label>
+                    <input class="set" id="s2" type="number">
+                    <button class="set_b" type="button" onclick="setpoint2()">
+                        Set2
+                    </button>
+
+
+                    <label for="setpoint3">
+                        Setpoint 2
+                    </label>
+                    <input class="set" id="s3" type="number">
+                    <button class="set_b" type="button" onclick="setpoint3()">
+                        Set2
+                    </button>
+
+                </div>
+
+                <h3 class="menu_control-titulo">MANDO MANUAL </h3>
+                <h4>Válvulas</h4>
+
+                <div>
+                    
+                    <button class="val" id="valvula1" type="button" onclick="v1()" value="1">
+                        Valvula 1
+                    </button>
+
+                    <button class="val" type="button" onclick="v2()">
+                        Valvula 2
+                    </button>
+
+                    <button class="val" type="button" onclick="v3()">
+                        Valvula 3
+                    </button>
+                    
+                
+                    <button class="val" type="button" onclick="v4()">
+                        Valvula 4
+                    </button>
+                    <button class="val" type="button" onclick="v5()">
+                        Valvula 5
+                    </button>
+                    <button class="val" type="button" onclick="v6()">
+                        Valvula 6
+                    </button>
+                    <button class="val" type="button" onclick="v7()">
+                        Valvula 7
+                    </button>
+                </div>
+
+                <div>
+                    <h4>Bombas</h4>
+                    <button class="bom" type="button" onclick="b1()">
+                        Bomba 1
+                    </button>
+                    <button class="bom" type="button" onclick="b2()">
+                        Bomba 2
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+            
+        </section>
+        <section class="menu_visualizacion">
+            
+            <section><h1 class="menu_visualizacion-titulo">PROCESO INDUSTRIAL</h1></section>
+            <section>
+                <div class="menu_visualizacion-proceso">
+                
+                    <ul class="menu_visualizacion-proceso--items1">
+                        <ol class="proceso_item11">T1</ol>
+                        <ol class="proceso_item12" id="proceso_item12">V1</ol>
+                    </ul>
+                                   
+                    <ul class="menu_visualizacion-proceso--items2">
+                        <ol class="proceso_item21" id="proceso_item21">B1</ol>
+                        <ol class="proceso_item22" id="proceso_item22">V2</ol>
+                        <ol class="proceso_item23">T1</ol>
+                        <ol class="proceso_item24" id="proceso_item24">V3</ol>
+                        <ol class="proceso_item25" id="proceso_item25">B2</ol>
+                        <ol class="proceso_item26" id="proceso_item26">V4</ol>
+                        <ol class="proceso_item27">T3</ol>
+                        <ol class="proceso_item28" id="proceso_item28">V5</ol>
+                    </ul>
+                
+                
+                    <ul class="menu_visualizacion-proceso--items3">
+                        <ol class="proceso_item31" id="proceso_item31">V6</ol>
+                        <ol class="proceso_item32" id="proceso_item32">V7</ol>
+                    </ul>
+                </div>
+            </section>
+            <section><h1 class="menu_visualizacion-titulo">VISUALIZACION DE VARIABLES</h1></section>
+
+            <section class="menu_visualizacion-displays">
+                <div class="menu_visualizacion-displays1"><h2 class="menu_visualizacion-titulo">Válvulas</h2> <br>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Válvula 1: </h3>
+                        <p id="proceso_item12_p">Estado</p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Válvula 2: </h3>
+                        <p id="proceso_item22_p">Estado</p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Válvula 3: </h3>
+                        <p id="proceso_item24_p">Estado</p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Válvula 4: </h3>
+                        <p id="proceso_item26_p">Estado</p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Válvula 5: </h3>
+                        <p id="proceso_item28_p">Estado</p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Válvula 6: </h3>
+                        <p id="proceso_item31_p">Estado</p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Válvula 7: </h3>
+                        <p id="proceso_item32_p">Estado</p>
+                    </div>
+                
+                
+                
+                </div>
+                <div class="menu_visualizacion-displays1"><h2 class="menu_visualizacion-titulo">Bombas</h2> <br>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Bomba 1: </h3>
+                        <p id="proceso_item21_p">Estado</p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Bomba 2: </h3>
+                        <p id="proceso_item25_p">Estado</p>
+                    </div>
+                
+                </div>
+                <div class="menu_visualizacion-displays1"><h2 class="menu_visualizacion-titulo">Nivel de Tanques</h2><br>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Tanque 1: </h3>
+                        <p id="setpoint1_p"></p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Tanque 2: </h3>
+                        <p id="setpoint2_p"></p>
+                    </div>
+                    <div class="menu_visualizacion-displays--items">
+                        <h3>Tanque 3: </h3>
+                        <p id="setpoint3_p"></p>
+                    </div>
+                </div>
+            </section> 
+            <section>
+                <h1 class="menu_visualizacion-titulo">GRÁFICAS</h1>
+                
+                <!--**8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888-->
+                <canvas class="menu_visualizacion-grafica" id="myChart" ></canvas>
+                <script>
+                    var ctx = document.getElementById('myChart').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: [1, 2,3, 4, 5, 6,7,8,9,10,11,12,13],
+                            datasets: [{
+                                label: 'Variable Medida',
+                                data: [12, 19, 3, 5, 2, 3,10,13,14,2,3,6,8,],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+
+
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }                    
+                    });
+                </script>
+
+<canvas class="menu_visualizacion-grafica" id="myChart2" ></canvas>
+<script>
+    var ctx = document.getElementById('myChart2').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: [1, 2,3, 4, 5, 6,7,8,9,10,11,12,13],
+            datasets: [{
+                label: 'Variable Medida',
+                data: [12, 19, 3, 5, 2, 3,10,13,14,2,3,6,8],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+
+
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }                    
+    });
+</script>
+                
+                <!--**8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888-->
+
+
+
+
+
+
+    
+            </section>
+
+        </section>
+
+
+        
+
+    </section>
+
+    <script src="./control.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: rgba(189, 185, 185, 0.692);
+
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    font-size: 1em;
+
+}
+body{
+   height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #2b2e41;
+    overflow: scroll;
+}
+
+.header{
+    display: flex;
+    height: 5rem;
+    /*box-shadow: 5px 10px 10px rgba(250, 250, 250, 0.418);*/
+    width: 100%;
+    background-color: rgb(78, 83, 110,0.2);
+}
+
+.header_titulos{
+display: flex;
+flex-direction: column;
+align-items: safe center;
+width: 80%;
+
+}
+
+
+.menu_control{
+    
+    
+}
+
+.menu_control-botones{
+
+    flex: 0 0 20%;
+    line-height: 2rem;
+    background-color: rgb(78, 83, 110,0.2);
+   /* box-shadow: 5px 10px 10px rgba(250, 250, 250, 0.418);*/
+}
+
+
+.menu_visualizacion{
+    padding: 2rem 2rem ;
+    flex: 1;
+}
+
+.menu_visualizacion-proceso{
+    padding: 10px;
+    margin: 10px;
+    height: 80vh;
+    width: 100%;
+    /*box-shadow: 5px 10px 10px rgba(250, 250, 250, 0.418);*/
+    background-image: url(./TANQUE.png);
+    background-size: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*Ajusta la pantalla*/
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    /*background-color: #3c405a;*/
+    background-color:rgb(78, 83, 110,0.2);
+}
+
+
+
+.menu_visualizacion-proceso--items1{
+   /* border: 1px solid rgb(137, 4, 247);*/
+    height: 28%;
+    display: flex;
+}
+.menu_visualizacion-proceso--items2{
+   /* border: 1px solid red;*/
+    height: 43%;
+    display: flex;
+
+}
+.menu_visualizacion-proceso--items3{
+    /*border: 1px solid rgb(59, 199, 71);*/
+    height: 30%;
+    display: flex;
+}
+.proceso_item11{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 50px;
+}
+.proceso_item12{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 62px;
+    margin-left: 61px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 15px;
+}
+
+.proceso_item21{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 60px;
+    margin-left: 105px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.proceso_item22{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 75px;
+    margin-left: 73px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 18px;
+    height: 15px;
+}
+
+.proceso_item23{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 0px;
+    margin-left: 25px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 155px;
+}
+
+.proceso_item24{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 75px;
+    margin-left: -33px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 18px;
+    height: 15px;
+}
+
+.proceso_item25{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 60px;
+    margin-left: 65px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.proceso_item26{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 75px;
+    margin-left: 74px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 18px;
+    height: 15px;
+}
+
+.proceso_item27{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 0px;
+    margin-left: 25px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    width: 170px;
+    height: 155px;
+}
+
+.proceso_item28{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 123px;
+    margin-left: -12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 18px;
+    height: 15px;
+}
+.proceso_item31{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 15px;
+    margin-left: 490px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 15px;
+}
+
+.proceso_item32{
+    background-color: rgba(255, 0, 0, .2) ;
+    border:1px solid rgb(255, 0, 0);
+    margin-top: 15px;
+    margin-left: 160px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 15px;
+}
+
+.menu_visualizacion{
+
+    position: relative;
+}
+    
+.menu_visualizacion-displays{
+    margin: 10px;
+    padding:10px;
+
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu_visualizacion-displays--items{
+    display: flex;
+    justify-content: space-around;
+    height: 2rem;
+
+}
+
+.menu_visualizacion-displays1{
+
+    border-radius: 10px;
+    height: 100%;
+    width: 30%;
+    /*box-shadow: 5px 10px 10px rgba(250, 250, 250, 0.418);*/
+    background-color: rgb(78, 83, 110,0.2);
+
+
+}
+
+
+.menu_control-titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: safe center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+   /* border-bottom:1px solid rgba(245, 243, 243, 0.521);*/
+}
+
+.menu_visualizacion-titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: safe center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+    /*border-bottom:1px solid rgba(245, 243, 243, 0.521);*/
+
+}
+
+.menu_visualizacion-grafica{
+    padding: 10px;
+    margin: 10px;
+    height: 54vh;
+    border-radius: 3%;
+    /*box-shadow: 5px 10px 10px rgba(250, 250, 250, 0.418);*/
+    background-color:rgb(78, 83, 110,0.2);
+
+}
+
+.set{
+    background-color: rgba(205, 58, 129, .2) ;
+    border:1px solid rgba(205, 58, 129, 1);
+}
+.set_b{
+    border-radius: 10%;
+    height: 2rem;
+    width: 3rem;
+    background-color: rgba(205, 58, 129, .2) ;
+    border:1px solid rgba(205, 58, 129, 1);
+}
+
+.marcha_paro_b{
+    border-radius: 10%;
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid rgba(33, 192, 215, 1);
+    background-color: rgba(33, 192, 215, .2);
+}
+
+.val{
+    border-radius: 10%;
+    height: 2rem;
+    width: 5rem;
+    border: rgba(217, 158, 43, 1);
+    background-color: #d99e2b33;
+    
+}
+
+.bom{
+    border-radius: 10%;
+    height: 2rem;
+    width: 5rem;
+    border: rgba(116, 72, 194, 1);
+    background-color: rgba(116, 72, 194, .2);
+}
+
